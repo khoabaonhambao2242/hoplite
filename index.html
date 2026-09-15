@@ -3,38 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adrian ❤ Hana</title>
-  <meta name="description" content="Website bucin Adrian & Hana 💘" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💘</text></svg>" />
+  <title>Adrian &amp; Hana</title>
+  <meta name="description" content="Cerita Adrian & Hana" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♥</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="cursor-heart" id="cursorHeart">❤</div>
+  <div class="cursor-dot" id="cursorDot"></div>
   <div class="progress-bar" id="progressBar"></div>
 
   <!-- ============ 1. HERO ============ -->
   <section class="hero" id="hero">
-    <div class="hero-hearts" id="heroHearts"></div>
-    <p class="hero-kicker" id="heroKicker">sebuah website yang dibuat dengan 99% cinta, 1% kode</p>
-    <h1 class="hero-title">
-      <span class="hero-name" id="nama1">Adrian</span>
-      <span class="hero-amp" id="heroAmp">💘</span>
-      <span class="hero-name" id="nama2">Hana</span>
-    </h1>
-    <p class="hero-sub"><span id="typingText"></span><span class="typing-caret">|</span></p>
-    <button class="scroll-btn" id="scrollBtn" aria-label="Scroll ke bawah">
-      <span class="scroll-heart">🫀</span>
-      <span>scroll pelan-pelan ya</span>
-      <span class="scroll-arrow">↓</span>
-    </button>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-kicker" id="heroKicker">sebuah cerita kecil tentang kita</p>
+      <h1 class="hero-title">
+        <span class="hero-name" id="nama1">Adrian</span>
+        <span class="hero-amp" id="heroAmp">&amp;</span>
+        <span class="hero-name" id="nama2">Hana</span>
+      </h1>
+      <p class="hero-sub"><span id="typingText"></span><span class="typing-caret">|</span></p>
+      <button class="scroll-btn" id="scrollBtn" aria-label="Scroll ke bawah">
+        <span>scroll pelan-pelan</span>
+        <span class="scroll-arrow">↓</span>
+      </button>
+    </div>
   </section>
 
   <!-- ============ 2. TIMELINE HORIZONTAL ============ -->
   <section class="timeline-section" id="timeline">
     <div class="timeline-pin">
-      <h2 class="section-title wobble-title">Perjalanan Kita 🚂</h2>
+      <h2 class="section-title">Perjalanan Kita</h2>
       <div class="timeline-track" id="timelineTrack"></div>
       <div class="timeline-line"></div>
     </div>
@@ -42,14 +43,14 @@
 
   <!-- ============ 3. ALASAN (KARTU) ============ -->
   <section class="reasons-section" id="reasons">
-    <h2 class="section-title">Alasan Aku Sayang Kamu 🃏</h2>
-    <p class="section-hint">(klik kartunya buat kepo)</p>
+    <h2 class="section-title">Alasan Aku Sayang Kamu</h2>
+    <p class="section-hint">klik kartunya</p>
     <div class="cards-grid" id="cardsGrid"></div>
   </section>
 
-  <!-- ============ 4. METERAN BUCIN ============ -->
+  <!-- ============ 4. METERAN ============ -->
   <section class="meter-section" id="meter">
-    <h2 class="section-title">Meteran Bucin 📈</h2>
+    <h2 class="section-title">Dalam Angka</h2>
     <div class="stats">
       <div class="stat">
         <div class="stat-num" data-count="days" id="statDays">0</div>
@@ -57,7 +58,7 @@
       </div>
       <div class="stat">
         <div class="stat-num" data-count="12847">0</div>
-        <div class="stat-label">chat terkirim (kira-kira)</div>
+        <div class="stat-label">chat terkirim</div>
       </div>
       <div class="stat">
         <div class="stat-num infinity">∞</div>
@@ -65,40 +66,53 @@
       </div>
     </div>
     <div class="meter-wrap">
-      <div class="meter-label">Level Bucin:</div>
+      <div class="meter-label">Level sayang</div>
       <div class="meter-bar"><div class="meter-fill" id="meterFill"><span id="meterPct">0%</span></div></div>
-      <div class="meter-boom" id="meterBoom">💥 OVERLOAD! 💥</div>
+      <div class="meter-boom" id="meterBoom">melebihi batas pengukuran</div>
     </div>
   </section>
 
-  <!-- ============ 5. GOMBALAN GENERATOR ============ -->
+  <!-- ============ 5. GALAKSI 3D ============ -->
+  <section class="galaxy-section" id="galaxy">
+    <div class="galaxy-pin">
+      <canvas id="galaxyCanvas"></canvas>
+      <div class="galaxy-text">
+        <p class="galaxy-line" id="gLine1">Di antara jutaan bintang,</p>
+        <p class="galaxy-line" id="gLine2">miliaran planet,</p>
+        <p class="galaxy-line" id="gLine3">dan semua kemungkinan di semesta ini —</p>
+        <p class="galaxy-line galaxy-big" id="gLine4">aku tetap milih kamu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. GOMBALAN GENERATOR ============ -->
   <section class="gombal-section" id="gombal">
-    <h2 class="section-title">Mesin Gombal 🎰</h2>
+    <h2 class="section-title">Mesin Gombal</h2>
     <div class="slot-machine">
       <div class="slot-screen" id="slotScreen">
-        <p id="gombalText">Tarik tuasnya, berani gak? 😏</p>
+        <p id="gombalText">Tarik tuasnya, berani?</p>
       </div>
       <button class="slot-lever" id="slotLever" aria-label="Tarik tuas gombalan">
-        <span class="lever-ball">🔴</span>
+        <span class="lever-ball"></span>
         <span class="lever-stick"></span>
       </button>
     </div>
-    <button class="gombal-btn" id="gombalBtn">GOMBALIN AKU! 💝</button>
+    <button class="gombal-btn" id="gombalBtn">gombalin aku</button>
   </section>
 
-  <!-- ============ 6. KUIS ============ -->
+  <!-- ============ 7. KUIS ============ -->
   <section class="quiz-section" id="quiz">
-    <h2 class="section-title" id="quizQuestion">Hana, kamu sayang Adrian gak? 🥺</h2>
+    <h2 class="section-title" id="quizQuestion">Hana, kamu sayang Adrian gak?</h2>
     <div class="quiz-btns" id="quizArea">
-      <button class="btn-yes" id="btnYes">IYA DONG 😍</button>
-      <button class="btn-no" id="btnNo">nggak 😐</button>
+      <button class="btn-yes" id="btnYes">iya dong</button>
+      <button class="btn-no" id="btnNo">nggak</button>
     </div>
     <p class="quiz-taunt" id="quizTaunt"></p>
   </section>
 
-  <!-- ============ 7. SURAT CINTA ============ -->
+  <!-- ============ 8. SURAT CINTA ============ -->
   <section class="letter-section" id="letter">
-    <h2 class="section-title">Ada Surat Buat Kamu 💌</h2>
+    <h2 class="section-title">Ada Surat Buat Kamu</h2>
     <div class="envelope-wrap" id="envelopeWrap">
       <div class="envelope">
         <div class="envelope-flap" id="envelopeFlap"></div>
@@ -109,16 +123,18 @@
       </div>
     </div>
     <footer class="footer">
-      <p>dibuat dengan 💘 + GSAP &nbsp;·&nbsp; <span id="footerNames">Adrian & Hana</span> · est. <span id="footerDate">09.02.2026</span></p>
+      <p>dibuat dengan sayang · <span id="footerNames">Adrian &amp; Hana</span> · est. <span id="footerDate">09.02.2026</span></p>
     </footer>
   </section>
 
   <div class="heart-rain" id="heartRain"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
   <script src="js/config.js"></script>
+  <script src="js/scene3d.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
